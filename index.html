@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Sueldo bruto a neto</title>
+</head>
+<body>
+    <main>
+        <section class="banner">
+            <h1>Calculadora de sueldos: bruto a neto</h1>
+    
+            <p>
+                ¿Te preocupa no estar calculando correctamente el salario de tus colaboradores? ¡Nuestro simulador es la solución! Con tan solo ingresar el sueldo bruto, podrás conocer el monto neto y exacto que deben ganar tus colaboradores.
+            </p>
+        </section>
+
+        <section class="instrucciones">
+            <div>
+                <h2>¡Calcular Sueldo!</h2>
+            <p>
+                Ingresa el monto exacto de su sueldo bruto mensual. ¡En cuestión de segundos obtendrás su salario neto y los detalles de las deducciones y retenciones que se deben pagar!
+            </p>
+            </div>
+            <section class="ingersaSueldoBruto">
+                <h2>
+                    Ingresa el suledo bruto
+                </h2>
+                <input type="number" placeholder="0" id="inputSueldoBruto">
+                <button id="calcular">Calcular</button>
+            </section>
+        </section>
+
+        <h2 class="title-detalles">Detalles del sueldo</h2>
+
+        <section class="container-detalles">
+            <div class="detalles">
+                <article class="container-blues">
+                    <p>(A) Sueldo</p>
+                    <span id="spanSueldoBruto">0</span>
+                </article>
+                <article class="resultado">
+                    <div>
+                        <p>Limite Inferior</p>
+                    </div>
+                    <div>
+                        <span id="spanLimiteInferior">0</span>
+                    </div>
+                </article>
+            </div>
+            <div class="detalles">
+                <article class="resultado">
+                    <div>
+                        <p class="text-blue">Excedente del limite inferior</p>
+                    </div>
+                    <div>
+                        <span id="spanExcedenteLimiteInferior">0</span>
+                    </div>
+                </article>
+                <article class="resultado">
+                    <div>
+                        <p>% sobre el excedente del limite inferior</p>
+                    </div>
+                    <div>
+                        <span id="spanPorcentajeLimiteInferior">0</span>
+                    </div>
+                </article>
+            </div>
+            <div class="detalles">
+                <article class="resultado">
+                    <div>
+                        <p class="text-blue">Impuesto marginal</p>
+                    </div>
+                    <div>
+                        <span id="spanImpuestoMarginal">0</span>
+                    </div>
+                </article>
+                <article class="resultado">
+                    <div>
+                        <p>Cuota fija del impuesto</p>
+                    </div>
+                    <div>
+                        <span id="spanCuotaFija">0</span>
+                    </div>
+                </article>
+            </div>
+            <div class="detalles">
+                <article class="resultado">
+                    <div>
+                        <p class="text-blue">ISR determinado</p>
+                    </div>
+                    <div>
+                        <span id="spanISRDeterminado">0</span>
+                    </div>
+                </article>
+                <article class="resultado">
+                    <div>
+                        <p>Subsidio al empleo causado</p>
+                    </div>
+                    <div>
+                        <span>0</span>
+                    </div>
+                </article>
+                <article class="container-blues">
+                    <p>(B) ISR a retener</p>
+                    <span id="spanISRARetener">0</span>
+                </article>
+            </div>
+        </section>
+        <section class="container-sueldoNeto">
+            <h1>Sueldo Neto</h1>
+            <p>Formula: A - B</p>
+            <span id="spanSueldoNeto">0</span>
+            <p>
+                *Esta calculadora contempla resulatdos aproximados de las prestaciones minimas de ley sin las retenciones del IMS.
+            </p>
+        </section>
+    </main>
+    <script src="./main/tarifas.js"></script>
+    <script src="./main/calculo.js"></script>
+    <script src="./main/btnCalcular.js"></script>
+    <script></script>
+</body>
+</html>
